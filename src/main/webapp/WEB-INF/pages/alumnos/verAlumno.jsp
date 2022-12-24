@@ -1,5 +1,3 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <jsp:include page="../comunes/inicioHTML.jsp">
     <jsp:param name="elTitulo" value="Vista de Alumno ${alumnoAVer.nombreCompleto}" />
 </jsp:include>

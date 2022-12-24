@@ -26,11 +26,14 @@
              </div>
             <div class="card-footer">
                 <div class="row justify-content-around">
-                    <div class="col-3">
-                        <a href="${pageContext.request.contextPath}/app?accion=edit&id=${alumno.id}" class="btn bg-warning w-100"><i class="bi bi-pencil"></i></a>
+                    <div class="col-auto">
+                        <a href="${pageContext.request.contextPath}/app" class="btn btn-secondary">Volver al listado</a>
                     </div>
                     <div class="col-3">
-                        <a href="${pageContext.request.contextPath}/app?accion=remove&id=${alumno.id}" class="btn bg-danger text-light w-100"><i class="bi bi-trash3"></i></a>
+                        <a href="${pageContext.request.contextPath}/app?accion=edit&id=${alumnoAVer.id}" class="btn bg-warning w-100"><i class="bi bi-pencil"></i></a>
+                    </div>
+                    <div class="col-3">
+                        <a href="${pageContext.request.contextPath}/app?accion=remove&id=${alumnoAVer.id}" class="btn bg-danger text-light w-100"><i class="bi bi-trash3"></i></a>
                     </div>
                 </div>
             </div>

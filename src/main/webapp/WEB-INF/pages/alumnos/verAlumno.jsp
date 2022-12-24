@@ -8,24 +8,24 @@
 
 <section class="container">
     <div class="row py-3 align-items-center justify-content-center">
-        <div class="card" style="max-width: 540px;">
+        <div class="card" style="max-width: 600px;">
+            <div class="card-header">
+                <h4 class="card-title text-center">Ficha de Alumno</h4>
+            </div>
              <div class="row p-2">
-                <div class="col-4">
+                <div class="col-4 align-middle">
                  <img src="${alumnoAVer.foto}" class="img-fluid rounded" alt="Foto de Alumno">
                 </div>
-                <div class="col-8">
-                    <div class="card-body">
-                        <h5 class="card-title pb-2">Ficha de Alumno</h5>
-                        <p class="card-text">Apellido: ${alumnoAVer.apellido}</p>
-                        <p class="card-text">Nombre: ${alumnoAVer.nombre}</p>
-                        <p class="card-text">Fecha de Nacimiento: ${alumnoAVer.fechaNacimiento}</p>
-                        <p class="card-text">Edad: ${alumnoAVer.edad} años</p>
-                        <p class="card-text">Mail: ${alumnoAVer.mail}</p>
-                    </div>
+                <div class="col-8">                    
+                    <p class="card-text"><span class="fw-bold">Apellido: </span>${alumnoAVer.apellido}</p>
+                    <p class="card-text"><span class="fw-bold">Nombre: </span>${alumnoAVer.nombre}</p>
+                    <p class="card-text"><span class="fw-bold">Fecha de Nacimiento: </span>${alumnoAVer.fechaNacimiento}</p>
+                    <p class="card-text"><span class="fw-bold">Edad: </span>${alumnoAVer.edad} años</p>
+                    <p class="card-text"><span class="fw-bold">Mail: </span>${alumnoAVer.mail}</p>
                 </div>
              </div>
             <div class="card-footer">
-                <div class="row justify-content-center">
+                <div class="row justify-content-around">
                     <div class="col-3">
                         <a href="${pageContext.request.contextPath}/app?accion=edit&id=${alumno.id}" class="btn bg-warning w-100"><i class="bi bi-pencil"></i></a>
                     </div>

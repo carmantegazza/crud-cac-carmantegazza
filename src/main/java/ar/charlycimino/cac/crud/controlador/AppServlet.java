@@ -25,6 +25,8 @@ public class AppServlet extends HttpServlet {
     private static final String URI_LIST = "WEB-INF/pages/alumnos/listadoAlumnos.jsp";
     private static final String URI_REMOVE = "WEB-INF/pages/alumnos/borrarAlumno.jsp";
     private static final String URI_EDIT = "WEB-INF/pages/alumnos/editarAlumno.jsp";
+    private static final String URI_VIEW = "WEB-INF/pages/alumnos/verAlumno.jsp";
+
 
     @Override
     public void init() throws ServletException {
@@ -49,6 +51,10 @@ public class AppServlet extends HttpServlet {
                 req.setAttribute("alumnoAEditar", alu);
                 req.setAttribute("yaTieneFoto", !alu.getFoto().contains("no-face"));
                 req.getRequestDispatcher(URI_EDIT).forward(req, resp);
+                break;
+            case "view":
+                req.setAttribute("alumnoAVer", model.getAlumno(id));
+                req.getRequestDispatcher(URI_VIEW).forward(req, resp);
                 break;
             default:
                 req.setAttribute("listaAlumnos", model.getAlumnos());
